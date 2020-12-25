@@ -1,38 +1,147 @@
 .App {
   text-align: center;
+  font-family: "Sofia";
+  font-size: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Langar', cursive;
+  text-align: center;
+  background-image: linear-gradient(to right top, #50d7b6, #1fcdcb, #1ac1d9, #46b3dd, #6ba4d7, #729cd2, #7a93cb, #818bc3, #7788c5, #6b85c6, #5c82c8, #4b7fc9);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#navbar {
+  overflow: hidden;
+  background-color: #50d7b6;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+#navbar a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   color: white;
+  top:0;
 }
 
-.App-link {
-  color: #61dafb;
+#navbar:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+.box{
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  width: 100%;
+  font-size: 20px;
+}
+.heading{
+  font-size: 30px;
+  padding-top:20px;
+}
+.content {
+  padding: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+.anime-writer{
+        white-space: nowrap;
+        overflow: hidden;    
+        position: absolute;
+        top: 10%;
+        left: 2%;
+        z-index: 20;
+        color: white;
+        font-size: 50px;
+        margin: 1%;
+        text-shadow: 0 1px 2px rgba(0,0,0,.6);
+        background: rgba(255,255,255,0.1);
+       }
+       .anime-writer{
+        animation: animated-text 2s steps(30,end) 1s 1 normal both;
+       }
+       @keyframes animated-text{
+        from{width: 0;}
+        to{width: 100%;}
+       }
+
+       .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.carousel,.carousel-inner{
+   width: 100% !important; 
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
   }
+  body{
+    font-size: 15px;
+  }
+  .heading{
+    font-size: 20px;
+  }
+  .box{
+    font-size: 10px;
+  }
+  .anime-writer{
+    font-size: 15px;
+  }
+}
+.fa{
+  color: white;
+  margin: 5px;
+}
+img{
+  width: 100%;
 }
